@@ -6,6 +6,6 @@ else()
 endif()
 
 project("intro")
-add_executable(intro main.cpp ) 
+add_executable(intro main.cpp) 
 target_compile_features(intro PRIVATE cxx_lambda_init_captures) #c++14
 
