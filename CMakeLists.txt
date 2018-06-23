@@ -1,8 +1,10 @@
 cmake_minimum_required(VERSION 3.9.2)
+project("intro")
+add_executable(intro main.cpp) 
 if(MSVC)
-	target_compile_options(project_warnings INTERFACE /W4)
+	target_compile_options(intro INTERFACE /W4)
 else()
-	target_compile_options(project_warnings
+	target_compile_options(intro
                          INTERFACE
                          -Wall
                          -Wextra # reasonable and standard
@@ -33,7 +35,5 @@ else()
                          )
 endif()
 
-project("intro")
-add_executable(intro main.cpp) 
 target_compile_features(intro PRIVATE cxx_lambda_init_captures) #c++14
 
